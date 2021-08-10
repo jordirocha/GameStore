@@ -1,31 +1,43 @@
 const API_KEY = "key=cf8090f7e7f94201ae3b0eacebd081f3";
 const BASE = "https://api.rawg.io/api/games?" + API_KEY;
-const URL_POPULAR =
-  "https://api.rawg.io/api/games?" +
-  API_KEY +
-  "&dates=2019-10-10,2020-10-10&ordering=-added&page_size=16";
+
 const GENRES = "https://api.rawg.io/api/genres?" + API_KEY;
 const PLATFORMS = "https://api.rawg.io/api/platforms?" + API_KEY;
 
 const main = document.getElementById("main");
 const genres = document.getElementById("genres");
+const selectedGenres = [];
+
+var lastUrl = "";
+var itemsPage = 15;
+var page = 1;
+const URL_POPULAR =
+  "https://api.rawg.io/api/games?" +
+  API_KEY +
+  "&dates=2019-10-10,2020-10-10&ordering=-added&page_size=" +
+  itemsPage + "&page=1";
+
+var totalGames = 0;
 
 getGames(URL_POPULAR);
 getGeneros(GENRES);
 
 function getGames(url) {
+  lastUrl = url;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
       if (data.results != 0) {
         console.log(data.results);
+        console.log(data.count);
+        totalGames = data.count;
         showGames(data.results);
       }
     });
 }
 
 function showGames(data) {
-  main.innerHTML = "";
+  // main.innerHTML = "";
   data.forEach((game) => {
     const { name, genres, rating, platforms, released, background_image } =
       game;
@@ -41,8 +53,8 @@ function showGames(data) {
              ${name}
             </h5>
             <h6 class="card-title font-weight-bold text-white vote p-2 border border-2 rounded-circle">${getRating(
-              rating
-            )}</h6>
+      rating
+    )}</h6>
           </div>
           <br />
           <h6 class="text-light genre">${getGenres(genres)}</h6>
@@ -124,12 +136,43 @@ function showGeneres(genre) {
 
 function filterBy(id) {
   if (document.getElementById(id).checked) {
+    selectedGenres.push(id);
+    console.log(selectedGenres.toString());
     getGames(BASE + "&genres=" + id);
   } else {
-    getGames(URL_POPULAR);
+    var index = selectedGenres.indexOf(id);
+    //  if (index != -1) {
+    //   selectedGenres.splice(index, 1);
+    //  }
+    index != -1 ? selectedGenres.splice(index, 1) : "";
+    console.log(selectedGenres.toString());
   }
+  console.log(BASE + "&genres=" + selectedGenres.toString());
+  getGames(BASE + "&genres=" + selectedGenres.toString());
 }
 
 function filterByYear(id) {
   getGames(BASE + "&dates=" + id + ",2000-12-30");
 }
+
+window.onscroll = function () {
+  var d = document.documentElement;
+  var offset = d.scrollTop + window.innerHeight;
+  var height = d.offsetHeight;
+
+  // console.log("offset = " + offset);
+  // console.log("height = " + height);
+
+  if (offset >= height) {
+    // itemsPage = itemsPage + 20;
+    // console.log(itemsPage);
+    page++;
+    console.log(page);
+    let substring = lastUrl.split("=");
+    substring[substring.length -1] = page;
+    lastUrl = substring.join("=");
+    console.log(lastUrl);
+    getGames(lastUrl);
+    console.log("At the bottom");
+  }
+};

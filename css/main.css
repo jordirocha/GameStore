@@ -5,9 +5,9 @@ body {
   font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
   display: none;
-}
+} */
 
 #placeholder::-webkit-input-placeholder {
   text-align: center;
