@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head.html')%>
+        <link rel="stylesheet" href="/css/index.css">
+        <title>
+            <%- title %>
+        </title>
+</head>
+
+<body class="text-white">
+
+    <%- include('partials/navigation.html')%>
+        <div class="container-fluid mt-5">
+
+            <div class="d-flex justify-content-between me-4 ms-4">
+                <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                    <i class="fas fa-filter"></i> Filter
+                </button>
+
+                <div class="dropdown">
+                    <a class="btn btn-primary dropdown-toggle btn-sm" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-bars"></i> Order by
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#" onclick="highScore()"><i
+                                    class="fas fa-sort-amount-up"></i> High score</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="lowScore()"><i
+                                    class="fas fa-sort-amount-down-alt"></i> Low score</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="relevance()"><i class="fas fa-rss"></i>
+                                Relevance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="main" class="row justify-content-center mt-4">
+
+                <!-- <div class="col">
+                    <div class="card overflow-hidden" style="width: 18rem;">
+                        <div class="bg-img"
+                            style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lukiegames.com%2Fassets%2Fimages%2FXbox-360%2Fx360_gears_of_war_2_p_rz1bqr.jpg&f=1&nofb=1'); height: 25rem;">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Card title</h5>
+                                <h6 class="vote p-2 bg-white border border-success rounded-circle">5.0</h6>
+                            </div>
+                            <h6 class="opacity-75">Action-aventure</h6>
+                            <h6 class="opacity-50">2021-05-12</h6>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn btn-light btn-sm">More</button>
+                                <div class="justify-content-between opacity-50">
+                                    <img src="img/pc.png" alt="pc" class="m-1" height="20">
+                                    <img src="img/xbox.png" alt="xbox" class="m-1" height="20">
+                                    <img src="img/sony.png" alt="sony" class="m-1" height="20">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasTopLabel" class="text-dark">Filter</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="accordion" id="accordionGenre">
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Genres
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionGenre">
+                            <div id="filterGeneres" class="accordion-body">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="accordion" id="accordionPlatform">
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                Platforms
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionPlatform">
+                            <div id="filterPlatforms" class="accordion-body">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <%- include('partials/footer.html')%>
+            <script src="/js/index.js"></script>
+            <script src="http://localhost:35729/livereload.js"></script>
+
+</body>
+
+</html>
