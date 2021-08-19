@@ -13,16 +13,14 @@
 
 </head>
 
-<body class="text-white" onload="onLoad();">
+<body class="text-white hidden">
 
-    <!-- <div id="preloader">
-        <div id="loader"></div>
-      </div> -->
+    <%- include('partials/preloader.html')%>
 
     <%- include('partials/navigation.html')%>
-        <div class="container-fluid mt-5" >
+        <div id="container" class="container-xxl mt-5">
 
-            <div class="d-flex justify-content-between me-4 ms-4">
+            <div class="d-flex justify-content-between">
                 <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
                     <i class="fas fa-filter"></i> Filter
@@ -44,31 +42,8 @@
                 </div>
             </div>
 
-            <div id="main" class="row justify-content-center mt-4">
+            <div id="main" class="row d-flex justify-content-center mt-4">
 
-                <!-- <div class="col">
-                    <div class="card overflow-hidden" style="width: 18rem;">
-                        <div class="bg-img"
-                            style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lukiegames.com%2Fassets%2Fimages%2FXbox-360%2Fx360_gears_of_war_2_p_rz1bqr.jpg&f=1&nofb=1'); height: 25rem;">
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="vote p-2 bg-white border border-success rounded-circle">5.0</h6>
-                            </div>
-                            <h6 class="opacity-75">Action-aventure</h6>
-                            <h6 class="opacity-50">2021-05-12</h6>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-light btn-sm">More</button>
-                                <div class="justify-content-between opacity-50">
-                                    <img src="img/pc.png" alt="pc" class="m-1" height="20">
-                                    <img src="img/xbox.png" alt="xbox" class="m-1" height="20">
-                                    <img src="img/sony.png" alt="sony" class="m-1" height="20">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
 
@@ -117,19 +92,17 @@
         </div>
 
         <%- include('partials/footer.html')%>
-        <script src="http://localhost:35729/livereload.js"></script>
-            <!-- <script type="text/javascript">
-                window.onload = function () {
-                    var main = document.getElementById("preloader");
-                    main.style.visibility = "hidden";
-                    // main.style.opacity = "0";
-                }
-            </script> -->
-            <script src="/js/index.js" type="text/javascript">
-            
-            </script>
-           
+            <script src="https://code.jquery.com/jquery-3.6.0.js"
+                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
+            <script src="/js/index.js" type="text/javascript">
+
+            </script>
+
+
+
+
+            <script src="http://localhost:35729/livereload.js"></script>
 </body>
 
 </html>

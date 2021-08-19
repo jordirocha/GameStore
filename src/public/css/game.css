@@ -13,6 +13,18 @@ h1 {
     font-size: 1.5rem;
 }
 
+@media (max-width: 1440px) {
+    h1 {
+        font-size: 5rem;
+    }
+    .description {
+        font-size: 1.3rem;
+    }
+    .col-7 {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1400px) {
     h1 {
         font-size: 3rem;
@@ -20,8 +32,8 @@ h1 {
     .description {
         font-size: 1.1rem;
     }
-    .col-7 {
-        width: 100%;
+    .store {
+        height: 90px;
     }
 }
 
@@ -32,6 +44,9 @@ h1 {
     .description {
         font-size: .85rem;
     }
+    .store {
+        height: 45px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -40,5 +55,8 @@ h1 {
     }
     .description {
         font-size: .8rem;
+    }
+    .store {
+        height: 30px;
     }
 }

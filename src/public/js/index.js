@@ -10,6 +10,7 @@ const search = document.getElementById("searcher");
 const main = document.getElementById("main");
 const filterGeneres = document.getElementById("filterGeneres");
 const filterPlatforms = document.getElementById("filterPlatforms");
+const filters = document.getElementById("filters");
 
 var selectedGenres = [];
 var selectedPlatforms = [];
@@ -19,6 +20,8 @@ var checkPlatform = document.getElementsByName("platform");
 
 var nextPage = "";
 var currentUrl = "";
+
+onLoad();
 
 function onLoad() {
     getGames(URL_GAMES);
@@ -30,7 +33,6 @@ function getGames(url) {
     currentUrl = url;
     fetch(url).then(res => res.json()).then(data => {
         if (data.results != 0) {
-            console.log(data.results);
             nextPage = data.next;
             showGames(data.results);
         }
@@ -44,7 +46,7 @@ function showGames(data) {
         card.classList.add("col-auto");
         card.classList.add("mb-4");
         card.innerHTML = `
-        <div class="card overflow-hidden border border-dark" style="width: 19rem;">
+        <div id="${id}" class="card overflow-hidden border border-dark" style="width: 19rem;" onclick="getInfoAbout(this.id)">
                         <div class="bg-img"
                             style="background-image: url('${background_image ? background_image : "https://site.groupe-psa.com/content/uploads/sites/3/2016/12/white-background-2.jpg"}'); height: 24rem;">
                         </div>
@@ -53,14 +55,13 @@ function showGames(data) {
                                 <h5 class="card-title">${name}</h5>
                                 <h6 class="vote p-2 bg-transparent <!--border border-success rounded-circle-->">${showScore(rating)}</h6>
                             </div>
-                            <br/>
-                            <h6 class="opacity-75 genres">${genres ? showGenres(genres) : "Unknow"}</h6>
-                            <h6 class="opacity-50 date">${released ? released : "Unknow"}</h6>
-                            <br/>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a id="${id}" type="button" class="btn btn-dark btn-sm" onclick="getInfoAbout(this.id)">More</a>
-                                <div class="justify-content-between opacity-50">
-                                   ${showPlatformsCard(platforms)}
+                            <br class="d-none d-sm-block"/>
+                            <h6 class="opacity-75 genres d-none d-sm-block">${genres ? showGenres(genres) : "Unknow"}</h6>
+                            <h6 class="opacity-50 date d-none d-sm-block">${released ? released : "Unknow"}</h6>
+                            <br class="d-none d-sm-block"/>
+                            <div class="d-none d-sm-block">
+                                <div class="d-flex justify-content-end align-items-center">
+                                    ${showPlatformsCard(platforms)}
                                 </div>
                             </div>
                         </div>
@@ -99,7 +100,7 @@ function showPlatformsCard(platforms) {
                 platformName = "switch";
             }
             if (platformName) {
-                platformsGame += `<img src="img/${platformName}.png" alt="${platformName}" class="m-1" height="20" />`;
+                platformsGame += `<img src="img/${platformName}.png" alt="${platformName}" class="platformsCard m-1 opacity-50" height="20" />`;
             }
         });
     }
@@ -107,13 +108,12 @@ function showPlatformsCard(platforms) {
 }
 
 search.addEventListener("keyup", (e) => {
+    clearMain();
     uncheckFilters();
     e.preventDefault();
-    clearMain();
     const searchGame = search.value;
     if (searchGame) {
         getGames(BASE_URL + API + "&search=" + searchGame.replace(" ", "+") + "&page=1");
-        console.log(BASE_URL + API + "&search=" + searchGame.replace(" ", "+") + "&page=1");
     } else {
         getGames(URL_GAMES);
     }
@@ -142,13 +142,10 @@ function showGeneres(genre) {
         checkBox.innerHTML = `
       <div  class="d-flex justify-content-between align-items-center">
         <div class="form-check">
-
            <input class="form-check-input"  type="checkbox" id="${id}" name="genere" value="${id}" onclick="filterBy()">
            <label class="form-check-label" style="font-size: 0.8em" for="${id}">
                ${name}
            </label>
-
-
         </div>
         <h6 class="opacity-50 date"> ${games_count}</h6>
         </div>
@@ -237,7 +234,8 @@ function filterBy() {
 
 function getInfoAbout(id) {
     localStorage.setItem("game", id);
-    window.location = "/game";
+    window.location.href = "/game";
+
 }
 
 function clearMain() {
@@ -255,4 +253,10 @@ function uncheckFilters() {
             checkPlatform[i].checked = false;
         }
     }
+}
+
+window.onload = function () {
+    $('#preloader').fadeOut('slow');
+    $('#preloader').addClass('visually-hidden');
+    $('body').removeClass('hidden');
 }

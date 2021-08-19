@@ -6,14 +6,14 @@ const GAME = BASE_URL + API;
 const GAME_IMG = "https://api.rawg.io/api/games/" + id + "/screenshots?" + API;
 const GAME_ADDITIONS = "https://api.rawg.io/api/games/" + id + "/additions?" + API;
 const GAME_SERIES = "https://api.rawg.io/api/games/" + id + "/game-series?" + API;
+const GAME_STORES = "https://api.rawg.io/api/games/" + id + "/stores?" + API;
 
 const main = document.getElementById("main");
-const imgScreen = document.getElementById("imgScreen");
+
 
 const screenGames = document.getElementById("screenshosts");
-// const imgScreen = document.getElementById("imgScreen");
+const imgScreen = document.getElementById("imgScreen");
 
-const aditions = document.getElementById("aditions");
 const imgContent = document.getElementById("imgContent");
 
 const market = document.getElementById("market");
@@ -29,43 +29,42 @@ var owl = $('.owl-carousel');
 id ? getGames(GAME) : "";
 getScreenshots(GAME_IMG);
 getReleated(GAME_SERIES);
-getAddtions(GAME_ADDITIONS);
+getStores(GAME_STORES);
 
 function getGames(url) {
     fetch(url).then(res => res.json()).then(data => {
         if (data != null) {
-            // console.log(data);
             document.title += " " + data.name;
-            console.log(data);
-            // data.stores != [] ? showStores(data.stores) : market.classList.add("d-none");
-            if (data.stores.length != 0) {
-                console.log("hay datos");
-                showStores(data.stores);
-            } else {
-                market.classList.add("d-none");
-            }
             showGame(data);
+        }
+    })
+}
+
+function getStores(url) {
+    fetch(url).then(res => res.json()).then(data => {
+        if (data.count != 0) {
+            showStores(data.results);
+        } else {
+            market.classList.add("d-none");
         }
     })
 }
 
 function showStores(stores) {
     stores.forEach(store => {
-        console.log(store.store);
         const market = document.createElement("a");
-        market.href = store.store.domain;
-        console.log(store.store.id);
-        if (store.store.id == 2 ||
-            store.store.id == 3 ||
-            store.store.id == 1 ||
-            store.store.id == 8 ||
-            store.store.id == 4 ||
-            store.store.id == 7) {
-            market.innerHTML = `<img src="img/${store.store.slug}.png" alt="" height="120" />`;
+        market.href = store.url;
+        market.target = "_blank"
+        if (store.store_id == 2 ||
+            store.store_id == 3 ||
+            store.store_id == 6 ||
+            store.store_id == 1 ||
+            store.store_id == 8 ||
+            store.store_id == 4 ||
+            store.store_id == 7) {
+            market.innerHTML = `<img src="img/${store.store_id}.png" alt="" class="store" height="120" />`;
             marketContent.appendChild(market);
         }
-
-        // marketContent.innerHTML += `<a href=""> <img src="${store.store}.png" alt="" height="150" /></a>`
     });
 }
 
@@ -129,7 +128,7 @@ function showPlatformsCard(platforms) {
                 platformName = "switch";
             }
             if (platformName) {
-                platformsGame += `<img src="img/${platformName}.png" alt="${platformName}" class="m-1" height="20" />`;
+                platformsGame += `<img src="img/${platformName}.png" alt="${platformName}" class="platformsCard m-1 opacity-50" height="20" />`;
             }
         });
     }
@@ -139,7 +138,6 @@ function showPlatformsCard(platforms) {
 function getScreenshots(url) {
     fetch(url).then(res => res.json()).then(data => {
         if (data != null) {
-            // console.log(data.results);
             showScreenshots(data.results)
         }
     })
@@ -148,9 +146,6 @@ function getScreenshots(url) {
 
 function showScreenshots(screenshots) {
     imgScreen.innerHTML = ""
-    // var content = $("#imgScreen");
-
-    // console.log(screenshots.length + "length");
     if (screenshots.length != 0) {
         screenshots.forEach(screenshot => {
             const itemImg = document.createElement("div");
@@ -159,11 +154,8 @@ function showScreenshots(screenshots) {
             imgScreen.appendChild(itemImg);
         });
     } else {
-        console.log("no hay datos");
         screenGames.classList.add("d-none");
     }
-
-
 
     owl.owlCarousel({
         stagePadding: 50,
@@ -187,42 +179,6 @@ function showScreenshots(screenshots) {
 
 }
 
-
-function getAddtions(url) {
-    fetch(url).then(res => res.json()).then(data => {
-        if (data.count != 0) {
-            console.log(data);
-            showAdditions(data.results);
-        } else {
-            aditions.classList.add("d-none");
-        }
-    })
-}
-
-function showAdditions(additions) {
-    // imgContent.innerHTML = "";
-    // additions.forEach(addition => {
-    //     var imagesContent = "";
-    //     const additionContent = document.createElement("div");
-    //     additionContent.classList.add("owl-carouselDlc");
-    //     additionContent.classList.add("owl-theme");
-    //     addition.short_screenshots.forEach(images => {
-    //         imagesContent += `<div class="item"><img src="${images.image}" class="rounded" alt=""/></div>`
-    //         console.log(imagesContent);
-
-    //     });
-
-    //     additionContent.innerHTML = imagesContent;
-    //     console.log(additionContent);
-
-
-    //     aditions.appendChild(additionContent);
-
-    // });
-
-
-}
-
 owl.on('mousewheel', '.owl-stage', function (e) {
     if (e.deltaY > 0) {
         owl.trigger('next.owl');
@@ -235,8 +191,6 @@ owl.on('mousewheel', '.owl-stage', function (e) {
 function getReleated(url) {
     fetch(url).then(res => res.json()).then(data => {
         if (data.count != 0) {
-            console.log(data);
-            // showAdditions(data.results);
             showReleated(data.results);
         } else {
             releatedGames.classList.add("d-none");
@@ -251,52 +205,29 @@ function showReleated(releateds) {
         card.classList.add("col-auto");
         card.classList.add("mb-4");
         card.innerHTML = `
-        <div class="card overflow-hidden border border-dark" style="width: 19rem;">
-                        <div class="bg-img"
-                            style="background-image: url('${background_image ? background_image : "https://site.groupe-psa.com/content/uploads/sites/3/2016/12/white-background-2.jpg"}'); height: 24rem;">
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <h5 class="card-title">${name}</h5>
-                                <h6 class="vote p-2 bg-transparent <!--border border-success rounded-circle-->">${showScore(rating)}</h6>
-                            </div>
-                            <br/>
-                            <h6 class="opacity-75 genres">${genres ? showGenres(genres) : "Unknow"}</h6>
-                            <h6 class="opacity-50 date">${released ? released : "Unknow"}</h6>
-                            <br/>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a id="${id}" type="button" class="btn btn-dark btn-sm" onclick="getInfoAbout(this.id)">More</a>
-                                <div class="justify-content-between opacity-50">
-                                   ${showPlatformsCard(platforms)}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div id="${id}" class="card overflow-hidden border border-dark" style="width: 19rem;" onclick="getInfoAbout(this.id)">
+        <div class="bg-img"
+            style="background-image: url('${background_image ? background_image : "https://site.groupe-psa.com/content/uploads/sites/3/2016/12/white-background-2.jpg"}'); height: 24rem;">
+        </div>
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title">${name}</h5>
+                <h6 class="vote p-2 bg-transparent <!--border border-success rounded-circle-->">${showScore(rating)}</h6>
+            </div>
+            <br class="d-none d-sm-block"/>
+            <h6 class="opacity-75 genres d-none d-sm-block">${genres ? showGenres(genres) : "Unknow"}</h6>
+            <h6 class="opacity-50 date d-none d-sm-block">${released ? released : "Unknow"}</h6>
+            <br class="d-none d-sm-block"/>
+            <div class="d-none d-sm-block">
+            <div class="d-flex justify-content-end align-items-center">
+                ${showPlatformsCard(platforms)}
+            </div>
+            </div>
+        </div>
+    </div>
         `;
         releatedtContent.appendChild(card);
     });
-}
-
-function showPlatformsCard(platforms) {
-    var platformsGame = "";
-    if (platforms) {
-        platforms.forEach(platform => {
-            var platformName = "";
-            if (platform.platform.name == "PC") {
-                platformName = "pc";
-            } else if (platform.platform.name == "Xbox One") {
-                platformName = "xbox";
-            } else if (platform.platform.name == "PlayStation 4") {
-                platformName = "sony";
-            } else if (platform.platform.name == "Nintendo Switch") {
-                platformName = "switch";
-            }
-            if (platformName) {
-                platformsGame += `<img src="img/${platformName}.png" alt="${platformName}" class="m-1" height="20" />`;
-            }
-        });
-    }
-    return platformsGame;
 }
 
 function getInfoAbout(id) {
@@ -316,3 +247,9 @@ document.addEventListener("click", function (e) {
         myModal.show();
     }
 })
+
+window.onload = function () {
+    $('#preloader').fadeOut('slow');
+    $('#preloader').addClass('visually-hidden');
+    $('body').removeClass('hidden');
+}

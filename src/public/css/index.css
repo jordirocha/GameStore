@@ -1,17 +1,16 @@
  /* Input search */
-#searcher::-webkit-input-placeholder {
-    text-align: center;
-    color: #7b7a7f;
-}
+ #searcher::-webkit-input-placeholder {
+     text-align: center;
+     color: #7b7a7f;
+ }
 
-#searcher[type="search"]{
-    text-align: center;
-    border-color: #7b7a7f !important;
-    border-radius: 2px !important;
-}
+ #searcher[type="search"] {
+     text-align: center;
+     border-color: #7b7a7f !important;
+     border-radius: 2px !important;
+ }
 
-#searcher{
-    background-color: #2f2e33 !important;
-    color: #f1f0f7;
-}
-
+ #searcher {
+     background-color: #2f2e33 !important;
+     color: #f1f0f7;
+ }
