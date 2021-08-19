@@ -1,7 +1,48 @@
 # GameApp
 <div><img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" heigth="20"/></div>
 
-
+## Project Directories
+    ├── package.json
+    ├── package-lock.json
+    ├── README.md
+    └── src
+        ├── index.js
+        ├── public
+        │   ├── css
+        │   │   ├── game.css
+        │   │   ├── index.css
+        │   │   └── main.css
+        │   ├── img
+        │   │   ├── 1.png
+        │   │   ├── 2.png
+        │   │   ├── 3.png
+        │   │   ├── 4.png
+        │   │   ├── 6.png
+        │   │   ├── 7.png
+        │   │   ├── 8.png
+        │   │   ├── favIcon.png
+        │   │   ├── msStore.png
+        │   │   ├── nintendo-switch.png
+        │   │   ├── pc.png
+        │   │   ├── playstation4.png
+        │   │   ├── sony.png
+        │   │   ├── switch.png
+        │   │   ├── xbox-one.png
+        │   │   ├── xbox.png
+        │   │   └── xboxStore.png
+        │   └── js
+        │       ├── game.js
+        │       └── index.js
+        ├── routes
+        │   └── index.js
+        └── views
+            ├── game.ejs
+            ├── index.ejs
+            └── partials
+                ├── footer.html
+                ├── head.html
+                ├── navigation.html
+                └── preloader.html
 ## Before to start
 Must install Node.js in your sistem:</br>
 
