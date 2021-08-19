@@ -1,6 +1,6 @@
 # GameApp
 <!--<div><img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" heigth="20"/></div>-->
-
+Web application to know about a lot of games can you imagin, on this app you can get information of your favourite game.
 ## Features
 - listing games from movie api
 - searching games by title
