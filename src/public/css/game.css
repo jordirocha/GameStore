@@ -1,0 +1,44 @@
+.game {
+    min-height: 100vh;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+h1 {
+    font-size: 5.5rem;
+}
+
+.description {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1400px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .description {
+        font-size: 1.1rem;
+    }
+    .col-7 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .description {
+        font-size: .85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2.20rem;
+    }
+    .description {
+        font-size: .8rem;
+    }
+}

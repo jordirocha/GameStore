@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <%- include('partials/head.html')%>
+    <link rel="stylesheet" href="/css/game.css">
+    <title>
+      <%- title %>
+    </title>
+</head>
+
+<body class="text-white">
+  <nav class="navbar fixed-top navbar-light bg-transparent">
+    <div class="container-fluid ms-5 mt-5">
+      <a class="navbar-brand" href="/">
+        <i class="text-success fas fa-arrow-left">
+        </i>
+      </a>
+    </div>
+  </nav>
+  <div id="main" class="game d-flex align-items-end">
+  </div>
+  <div id="screenshosts" class="mb-4">
+    <h3 class="text-white ms-5 mt-5">Screenshots
+    </h3>
+    <br>
+    <div id="imgScreen" class="owl-carousel owl-theme">
+    </div>
+  </div>
+  <div id="aditions" class="mb-4">
+    <h3 class="ms-5 mt-5"">DLC | Extra content</h3>
+                                <br>
+                                <div id="imgContent">
+  </div>
+  </div>
+
+<!-- <div class="d-flex justify-content-evenly">
+  <div class="card mb-3 col-3">
+    <img src="https://media.rawg.io/media/screenshots/9fe/9fe79b9e64ce1c167559a6968716cab4.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      
+
+    </div>
+  </div>
+
+  <div class="card mb-3 col-3">
+    <img src="https://media.rawg.io/media/games/121/1213f8b9b0a26307e672cf51f34882f8.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+     
+    </div>
+  </div>
+</div> -->
+
+
+  <div id="market" class="mb-4">
+    <h3 class="ms-5 mt-5"">Where to buy?
+          </h3>
+          <br>
+          <div id="marketContent" class="container-fluid d-flex justify-content-evenly align-items-center">
+  </div>
+  </div>
+  <div id="releatedGames">
+    <h3 class="ms-5 mt-5">Same saga
+    </h3>
+    <br />
+    <div id="releatedtContent" class="row justify-content-center">
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="gallery-game" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content align-items-center bg-transparent border-0"">
+                                                                                  <div class=" modal-body">
+        <img src="#" class="modal-img">
+      </div>
+    </div>
+  </div>
+  </div>
+  <%- include('partials/footer.html')%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/game.js"></script>
+    <!-- MDB -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script> -->
+    <script src="http://localhost:35729/livereload.js"></script>
+</body>
+
+</html>

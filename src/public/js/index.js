@@ -14,13 +14,17 @@ const filterPlatforms = document.getElementById("filterPlatforms");
 var selectedGenres = [];
 var selectedPlatforms = [];
 
+var checkGeneres = document.getElementsByName("genere");
+var checkPlatform = document.getElementsByName("platform");
+
 var nextPage = "";
 var currentUrl = "";
 
-
-getGames(URL_GAMES);
-getGenres(GENRES);
-getPlatforms(PLATFORMS);
+function onLoad() {
+    getGames(URL_GAMES);
+    getGenres(GENRES);
+    getPlatforms(PLATFORMS);
+}
 
 function getGames(url) {
     currentUrl = url;
@@ -34,14 +38,13 @@ function getGames(url) {
 }
 
 function showGames(data) {
-    isTyping() ? clearMain() : "";
     data.forEach(game => {
-        const { name, genres, rating, platforms, released, background_image } = game;
+        const { id, name, genres, rating, platforms, released, background_image } = game;
         const card = document.createElement("div");
         card.classList.add("col-auto");
         card.classList.add("mb-4");
         card.innerHTML = `
-        <div class="card overflow-hidden border border-dark" style="width: 18rem;">
+        <div class="card overflow-hidden border border-dark" style="width: 19rem;">
                         <div class="bg-img"
                             style="background-image: url('${background_image ? background_image : "https://site.groupe-psa.com/content/uploads/sites/3/2016/12/white-background-2.jpg"}'); height: 24rem;">
                         </div>
@@ -55,7 +58,7 @@ function showGames(data) {
                             <h6 class="opacity-50 date">${released ? released : "Unknow"}</h6>
                             <br/>
                             <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-dark btn-sm">More</button>
+                                <a id="${id}" type="button" class="btn btn-dark btn-sm" onclick="getInfoAbout(this.id)">More</a>
                                 <div class="justify-content-between opacity-50">
                                    ${showPlatformsCard(platforms)}
                                 </div>
@@ -104,8 +107,9 @@ function showPlatformsCard(platforms) {
 }
 
 search.addEventListener("keyup", (e) => {
-    clearMain();
+    uncheckFilters();
     e.preventDefault();
+    clearMain();
     const searchGame = search.value;
     if (searchGame) {
         getGames(BASE_URL + API + "&search=" + searchGame.replace(" ", "+") + "&page=1");
@@ -170,7 +174,6 @@ function showPlatforms(platforms) {
             checkPlatform.innerHTML = `
     <div  class="d-flex justify-content-between align-items-center">
         <div class="form-check">
-
            <input class="form-check-input" name="platform" type="checkbox" value="${id}" id="${id}" onclick="filterBy()">
            <img src="img/${slug}.png" alt="${slug}" class="m-1" height="15" />
            <label class="form-check-label" style="font-size: 0.8em" for="${id}">
@@ -193,15 +196,6 @@ window.onscroll = function () {
     }
 };
 
-function loadCardMain() {
-    var d = document.documentElement;
-    var offset = d.scrollTop + window.innerHeight;
-    var height = d.offsetHeight;
-    if (offset >= height) {
-        return true;
-    }
-    return false;
-}
 
 function highScore() {
     clearMain();
@@ -219,8 +213,6 @@ function relevance() {
 }
 
 function filterBy() {
-    var checkGeneres = document.getElementsByName("genere");
-    var checkPlatform = document.getElementsByName("platform");
     selectedGenres = [];
     selectedPlatforms = [];
     var genres = "";
@@ -239,9 +231,28 @@ function filterBy() {
     selectedGenres.length != 0 ? genres = "&genres=" + selectedGenres.toString() : "";
     selectedPlatforms.length != 0 ? platforms = "&platforms=" + selectedPlatforms.toString() : "";
     inputSearch ? inputSearch = "&search=" + inputSearch.replace(" ", "+") : "";
+    clearMain();
     getGames(URL_GAMES + genres + platforms + inputSearch);
+}
+
+function getInfoAbout(id) {
+    localStorage.setItem("game", id);
+    window.location = "/game";
 }
 
 function clearMain() {
     main.innerHTML = "";
+}
+
+function uncheckFilters() {
+    for (var i = 0, n = checkGeneres.length; i < n; i++) {
+        if (checkGeneres[i].checked) {
+            checkGeneres[i].checked = false;
+        }
+    }
+    for (var i = 0, n = checkPlatform.length; i < n; i++) {
+        if (checkPlatform[i].checked) {
+            checkPlatform[i].checked = false;
+        }
+    }
 }
