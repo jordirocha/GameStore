@@ -1,5 +1,13 @@
 # GameApp
-<div><img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" heigth="20"/></div>
+<!--<div><img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" heigth="20"/></div>-->
+
+## Features
+- listing games from movie api
+- searching games by title
+- on searching games will be displayed
+- filters by genre and platform
+- can get more about on click game 
+- carrousel of images
 
 ## Project Directories
     ├── package.json
