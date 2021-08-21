@@ -1,6 +1,6 @@
 # GameApp
 <div align="center">
-![](https://github.com/jordirocha/GameApp/blob/main/src/public/img/demo.gif)
+    <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/demo.gif" width="650" />
 </div>
 
 Like developer and gamer, I was thinking in develop a web application to get more information about games, so this is it.
