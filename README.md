@@ -1,5 +1,8 @@
 # GameApp
-<!--<div><img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" heigth="20"/></div>-->
+
+[![SC2 Video](https://img.youtube.com/vi/--b-9HrKK6w/0.jpg)](http://www.youtube.com/watch?v=--b-9HrKK6w)
+
+
 Like developer and gamer, I was thinking in develop a web application to get more information about games, so this is it.
 Applying all my knowlegde about programming this personal project has been released, With my project you'll know more about your favorite game.
 ## Features
