@@ -1,5 +1,7 @@
 # GameApp
-<embed src="hhttps://www.youtube.com/embed/123456 allowfullscreen="true" width="600" height="800"></embed>
+
+<iframe width="600" height="800" src="https://www.youtube.com/embed/123456" frameborder="0" allowfullscreen></iframe>
+
 Like developer and gamer, I was thinking in develop a web application to get more information about games, so this is it.
 Applying all my knowlegde about programming this personal project has been released, With my project you'll know more about your favorite game.
 ## Features
