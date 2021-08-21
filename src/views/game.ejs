@@ -20,60 +20,36 @@
 </head>
 
 <body class="text-white hidden">
-
-  <%- include('partials/preloader.html')%>
-
-  <nav class="navbar fixed-top navbar-light bg-transparent">
-    <div class="container-fluid ms-5 mt-5">
-      <a class="navbar-brand" href="/">
-        <i class="text-white fas fa-arrow-left">
-        </i>
-      </a>
-    </div>
-  </nav>
-  <div id="main" class="game d-flex align-items-end">
-  </div>
-  <div id="screenshosts" class="mb-4">
-    <h3 class="text-white ms-5 mt-5">Screenshots
-    </h3>
-    <br>
-    <div id="imgScreen" class="owl-carousel owl-theme">
-    </div>
-  </div>
-
-  <div id="market" class="mb-4">
-    <h3 class="ms-5 mt-5"">Where to buy?
-          </h3>
-          <br>
-          <div id="marketContent" class="container-fluid d-flex justify-content-evenly align-items-center">
-  </div>
-  </div>
-  <div id="releatedGames">
-    <h3 class="ms-5 mt-5">Same saga
-    </h3>
-    <br />
-    <div id="releatedtContent" class="row d-flex justify-content-center">
-    </div>
-  </div>
-
-  <div class="modal fade" id="gallery-game" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content align-items-center bg-transparent border-0"">
-                                                                                  <div class=" modal-body">
-        <img src="#" class="modal-img" style="width: 50vh;">
-      </div>
-    </div>
-  </div>
-  </div>
-  <%- include('partials/footer.html')%>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/js/game.js"></script>
-    <script src="http://localhost:35729/livereload.js"></script>
+	<%- include('partials/preloader.html')%>
+	<nav class="navbar fixed-top navbar-light bg-transparent">
+		<div class="container-fluid ms-5 mt-5">
+			<a class="navbar-brand" href="/"><i class="text-white fas fa-arrow-left"></i></a>
+		</div>
+	</nav>
+	<div class="game d-flex align-items-end" id="main"></div>
+	<div class="mb-4" id="screenshosts">
+		<h3 class="text-white ms-5 mt-5">Screenshots</h3><br>
+		<div class="owl-carousel owl-theme" id="imgScreen"></div>
+	</div>
+	<div class="mb-4" id="market">
+		<h3 class="ms-5 mt-5">Where to buy?</h3><br>
+		<div class="container-fluid d-flex justify-content-evenly align-items-center" id="marketContent"></div>
+	</div>
+	<div id="releatedGames">
+		<h3 class="ms-5 mt-5">Same saga</h3><br>
+		<div class="row d-flex justify-content-center" id="releatedtContent"></div>
+	</div>
+	<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="gallery-game" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content align-items-center bg-transparent border-0">
+				<div class=" modal-body"><img class="modal-img" src="#" style="width: 70vh;"></div>
+			</div>
+		</div>
+	</div><%- include('partials/footer.html')%>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+	</script> 
+	<script src="/js/game.js">
+	</script> <!-- <script src="http://localhost:35729/livereload.js"></script> -->
 </body>
 
 </html>

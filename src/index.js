@@ -13,7 +13,7 @@ app.use(require("./routes/index"));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(port, () => {
-    console.log("Funcionando!");
+    console.log("Working, port: " + port);
 });
 
 // var livereload = require("livereload").createServer({

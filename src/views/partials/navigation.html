@@ -1,37 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-dark  p-3">
+<nav class="navbar navbar-expand-lg navbar-dark p-4">
   <div class="container">
     <div class="col-md-3 text-left">
-      <a class="navbar-brand" href="/">
-        <img src="img/favIcon.png" height="25" alt="logo" class="d-inline-block align-text-top" />
-        GameApp
-      </a>
-    </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="
-          navbar-collapse
-          justify-content-center
-          col-md-6
-          navbar-collapse-1
-          collapse
-        " id="navbarSupportedContent">
-      <form onkeydown="return event.key != 'Enter'" class="d-flex col-12">
-        <input id="searcher" class="form-control rounded" type="search" placeholder="Game" aria-label="Search" />
+      <a class="navbar-brand" href="/"><img alt="logo" class="d-inline-block align-text-top" height="25" src="img/favIcon.png"> GameApp</a>
+    </div><button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+    <div class="navbar-collapse justify-content-center col-md-6 navbar-collapse-1 collapse" id="navbarSupportedContent">
+      <form class="d-flex col-12" onkeydown="return event.key != 'Enter'">
+        <input aria-label="Search" class="form-control rounded" id="searcher" placeholder="Game" type="search">
       </form>
     </div>
-
-    <div class="
-          navbar-collapse
-          justify-content-end
-          col-md-3
-          navbar-collapse
-          pr-md-0
-          collapse
-        " id="navbarSupportedContent">
-     
+    <div class="navbar-collapse justify-content-end col-md-3 navbar-collapse pr-md-0 collapse" id="navbarSupportedContent">
+      <a href="https://github.com/jordirocha/GameApp" target="_blank"><i class="fab fa-github fs-2 text-white"></i></a>
     </div>
   </div>
 </nav>

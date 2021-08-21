@@ -14,95 +14,52 @@
 </head>
 
 <body class="text-white hidden">
-
-    <%- include('partials/preloader.html')%>
-
-    <%- include('partials/navigation.html')%>
-        <div id="container" class="container-xxl mt-5">
-
-            <div class="d-flex justify-content-between">
-                <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                    <i class="fas fa-filter"></i> Filter
-                </button>
-
-                <div class="dropdown">
-                    <a class="btn btn-primary dropdown-toggle btn-sm" href="#" role="button" id="dropdownMenuLink"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-bars"></i> Order by
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#" onclick="highScore()"><i
-                                    class="fas fa-sort-amount-up"></i> High score</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="lowScore()"><i
-                                    class="fas fa-sort-amount-down-alt"></i> Low score</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="relevance()"><i class="fas fa-rss"></i>
-                                Relevance</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="main" class="row d-flex justify-content-center mt-4">
-
-            </div>
-        </div>
-
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-            <div class="offcanvas-header">
-                <h5 id="offcanvasTopLabel" class="text-dark">Filter</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div class="accordion" id="accordionGenre">
-                    <div class="accordion-item bg-transparent">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Genres
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionGenre">
-                            <div id="filterGeneres" class="accordion-body">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="accordion" id="accordionPlatform">
-                    <div class="accordion-item bg-transparent">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                Platforms
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
-                            data-bs-parent="#accordionPlatform">
-                            <div id="filterPlatforms" class="accordion-body">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <%- include('partials/footer.html')%>
-            <script src="https://code.jquery.com/jquery-3.6.0.js"
-                integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
-            <script src="/js/index.js" type="text/javascript">
-
-            </script>
-
-
-
-
-            <script src="http://localhost:35729/livereload.js"></script>
+	<%- include('partials/preloader.html')%><%- include('partials/navigation.html')%>
+	<div class="container-xxl mt-5" id="container">
+		<div class="d-flex justify-content-between">
+			<button aria-controls="offcanvasTop" class="btn btn-primary btn-sm" data-bs-target="#offcanvasTop" data-bs-toggle="offcanvas" type="button"><i class="fas fa-filter"></i> Filter</button>
+			<div class="dropdown">
+				<a aria-expanded="false" class="btn btn-primary dropdown-toggle btn-sm" data-bs-toggle="dropdown" href="#" id="dropdownMenuLink" role="button"><i class="fas fa-bars"></i> Order by</a>
+				<ul aria-labelledby="dropdownMenuLink" class="dropdown-menu dropdown-menu-dark">
+					<li>
+						<a class="dropdown-item" href="#" onclick="highScore()"><i class="fas fa-sort-amount-up"></i> High score</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#" onclick="lowScore()"><i class="fas fa-sort-amount-down-alt"></i> Low score</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#" onclick="relevance()"><i class="fas fa-rss"></i> Relevance</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row d-flex justify-content-center mt-4" id="main"></div>
+	</div>
+	<div aria-labelledby="offcanvasTopLabel" class="offcanvas offcanvas-start" id="offcanvasTop" tabindex="-1">
+		<div class="offcanvas-header">
+			<h5 class="text-dark" id="offcanvasTopLabel">Filter</h5><button aria-label="Close" class="btn-close text-reset" data-bs-dismiss="offcanvas" type="button"></button>
+		</div>
+		<div class="offcanvas-body">
+			<div class="accordion" id="accordionGenre">
+				<div class="accordion-item bg-transparent">
+					<h2 class="accordion-header" id="headingOne"><button aria-controls="collapseOne" aria-expanded="true" class="accordion-button" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">Genres</button></h2>
+					<div aria-labelledby="headingOne" class="accordion-collapse collapse show" data-bs-parent="#accordionGenre" id="collapseOne">
+						<div class="accordion-body" id="filterGeneres"></div>
+					</div>
+				</div>
+			</div><br>
+			<div class="accordion" id="accordionPlatform">
+				<div class="accordion-item bg-transparent">
+					<h2 class="accordion-header" id="headingTwo"><button aria-controls="collapseTwo" aria-expanded="true" class="accordion-button" data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button">Platforms</button></h2>
+					<div aria-labelledby="headingTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionPlatform" id="collapseTwo">
+						<div class="accordion-body" id="filterPlatforms"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><%- include('partials/footer.html')%>
+	<script src="/js/index.js" type="text/javascript">
+	</script> <!-- <script src="http://localhost:35729/livereload.js"></script> -->
 </body>
 
 </html>

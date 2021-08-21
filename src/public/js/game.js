@@ -1,5 +1,4 @@
 var id = localStorage.getItem("game");
-
 const API = "key=56535ae457a042b98b9e25a44bf265c6";
 const BASE_URL = "https://api.rawg.io/api/games/" + id + "?";
 const GAME = BASE_URL + API;
@@ -7,22 +6,14 @@ const GAME_IMG = "https://api.rawg.io/api/games/" + id + "/screenshots?" + API;
 const GAME_ADDITIONS = "https://api.rawg.io/api/games/" + id + "/additions?" + API;
 const GAME_SERIES = "https://api.rawg.io/api/games/" + id + "/game-series?" + API;
 const GAME_STORES = "https://api.rawg.io/api/games/" + id + "/stores?" + API;
-
 const main = document.getElementById("main");
-
-
 const screenGames = document.getElementById("screenshosts");
 const imgScreen = document.getElementById("imgScreen");
-
 const imgContent = document.getElementById("imgContent");
-
 const market = document.getElementById("market");
 const marketContent = document.getElementById("marketContent");
-
 const releatedGames = document.getElementById("releatedGames");
 const releatedtContent = document.getElementById("releatedtContent");
-
-
 
 var owl = $('.owl-carousel');
 
@@ -55,13 +46,7 @@ function showStores(stores) {
         const market = document.createElement("a");
         market.href = store.url;
         market.target = "_blank"
-        if (store.store_id == 2 ||
-            store.store_id == 3 ||
-            store.store_id == 6 ||
-            store.store_id == 1 ||
-            store.store_id == 8 ||
-            store.store_id == 4 ||
-            store.store_id == 7) {
+        if (store.store_id == 2 || store.store_id == 3 || store.store_id == 6 || store.store_id == 1 || store.store_id == 8 || store.store_id == 4 || store.store_id == 7) {
             market.innerHTML = `<img src="img/${store.store_id}.png" alt="" class="store" height="120" />`;
             marketContent.appendChild(market);
         }
@@ -72,34 +57,38 @@ function showGame(data) {
     main.innerHTML = "";
     const style = document.createElement('style');
     const gameInfo = document.createElement("div");
-    const { name, genres, description_raw, platforms, released, background_image } = data;
+    const {
+        name,
+        genres,
+        description_raw,
+        platforms,
+        released,
+        background_image
+    } = data;
     style.innerHTML = `#main{
-   background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 10%,
-        rgba(3, 4, 13, 255)
-      ),
-      url('${background_image}');
-}`;
+        background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0) 10%,
+                rgba(3, 4, 13, 255)
+            ),
+            url('${background_image}');
+        }`;
     document.head.appendChild(style);
-
     gameInfo.classList.add("m-5");
-
-
     gameInfo.innerHTML = `
-<h1 class="title text-capitalize">
-  ${name}
-</h1>
-<br class="d-none d-sm-block" />
-<p class="description lh-sm col-7 d-none d-sm-block">
-  ${description_raw}
-</p>
-<br class="d-none d-sm-block" />
-<p class="description"><strong>Genres:</strong> ${genres ? showGenres(genres) : "Unknow"}</p>
-<p class="description"><strong>Release date:</strong> ${released ? released : "Unknow"}</p>
-<p class="description">
-<strong>Platforms:</strong> ${showPlatformsCard(platforms)}
-</p>`
+        <h1 class="title text-capitalize">
+        ${name}
+        </h1>
+        <br class="d-none d-sm-block" />
+        <p class="description lh-sm col-7 d-none d-sm-block">
+        ${description_raw}
+        </p>
+        <br class="d-none d-sm-block" />
+        <p class="description"><strong>Genres:</strong> ${genres ? showGenres(genres) : "Unknow"}</p>
+        <p class="description"><strong>Release date:</strong> ${released ? released : "Unknow"}</p>
+        <p class="description">
+        <strong>Platforms:</strong> ${showPlatformsCard(platforms)}
+        </p>`
     main.appendChild(gameInfo);
 }
 
@@ -108,27 +97,15 @@ function showGenres(genres) {
     genres.forEach(genre => {
         genresGame += genre.name + ", ";
     });
-
     return genresGame.substring(0, genresGame.length - 2);
-
 }
 
 function showPlatformsCard(platforms) {
     var platformsGame = "";
     if (platforms) {
         platforms.forEach(platform => {
-            var platformName = "";
-            if (platform.platform.name == "PC") {
-                platformName = "pc";
-            } else if (platform.platform.name == "Xbox One") {
-                platformName = "xbox";
-            } else if (platform.platform.name == "PlayStation 4") {
-                platformName = "sony";
-            } else if (platform.platform.name == "Nintendo Switch") {
-                platformName = "switch";
-            }
-            if (platformName) {
-                platformsGame += `<img src="img/${platformName}.png" alt="${platformName}" class="platformsCard m-1 opacity-50" height="20" />`;
+            if (platform.platform.id == 7 || platform.platform.id == 1 || platform.platform.id == 4 || platform.platform.id == 18) {
+                platformsGame += `<img src="img/${platform.platform.slug}.png" alt="${platform.platform.slug}" class="platformsCard m-1 opacity-50" height="20" />`;
             }
         });
     }
@@ -143,7 +120,6 @@ function getScreenshots(url) {
     })
 }
 
-
 function showScreenshots(screenshots) {
     imgScreen.innerHTML = ""
     if (screenshots.length != 0) {
@@ -156,7 +132,6 @@ function showScreenshots(screenshots) {
     } else {
         screenGames.classList.add("d-none");
     }
-
     owl.owlCarousel({
         stagePadding: 50,
         loop: true,
@@ -176,9 +151,7 @@ function showScreenshots(screenshots) {
             }
         }
     });
-
 }
-
 owl.on('mousewheel', '.owl-stage', function (e) {
     if (e.deltaY > 0) {
         owl.trigger('next.owl');
@@ -200,7 +173,15 @@ function getReleated(url) {
 
 function showReleated(releateds) {
     releateds.forEach(game => {
-        const { id, name, genres, rating, platforms, released, background_image } = game;
+        const {
+            id,
+            name,
+            genres,
+            rating,
+            platforms,
+            released,
+            background_image
+        } = game;
         const card = document.createElement("div");
         card.classList.add("col-auto");
         card.classList.add("mb-4");
@@ -220,7 +201,7 @@ function showReleated(releateds) {
             <br class="d-none d-sm-block"/>
             <div class="d-none d-sm-block">
             <div class="d-flex justify-content-end align-items-center">
-                ${showPlatformsCard(platforms)}
+                 ${showPlatformsCard(platforms)}
             </div>
             </div>
         </div>
@@ -238,7 +219,6 @@ function getInfoAbout(id) {
 function showScore(score) {
     return (score + 0.0).toString().substring(0, 3);
 }
-
 document.addEventListener("click", function (e) {
     if (e.target.classList.contains("gallery-item")) {
         const src = e.target.getAttribute("src");
@@ -247,7 +227,6 @@ document.addEventListener("click", function (e) {
         myModal.show();
     }
 })
-
 window.onload = function () {
     $('#preloader').fadeOut('slow');
     $('#preloader').addClass('visually-hidden');
