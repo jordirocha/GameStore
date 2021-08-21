@@ -1,6 +1,6 @@
 # GameApp
 
-[![SC2 Video](https://img.youtube.com/vi/--b-9HrKK6w/0.jpg)](http://www.youtube.com/watch?v=--b-9HrKK6w)
+![](https://github.com/jordirocha/GameApp/blob/main/src/public/img/demo.gif)
 
 
 Like developer and gamer, I was thinking in develop a web application to get more information about games, so this is it.
