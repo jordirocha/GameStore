@@ -11,41 +11,41 @@ Applying all my knowlegde about programming this personal project has been relea
 - carrousel of images
 
 ## Project Directories
-├── package.json
-├── package-lock.json
-└── src
-    ├── index.js
-    ├── public
-    │   ├── css
-    │   │   ├── game.css
-    │   │   ├── index.css
-    │   │   └── main.css
-    │   ├── img
-    │   │   ├── 1.png
-    │   │   ├── 2.png
-    │   │   ├── 3.png
-    │   │   ├── 4.png
-    │   │   ├── 6.png
-    │   │   ├── 7.png
-    │   │   ├── 8.png
-    │   │   ├── favIcon.png
-    │   │   ├── nintendo-switch.png
-    │   │   ├── pc.png
-    │   │   ├── playstation4.png
-    │   │   └── xbox-one.png
-    │   └── js
-    │       ├── game.js
-    │       └── index.js
-    ├── routes
-    │   └── index.js
-    └── views
-        ├── game.ejs
-        ├── index.ejs
-        └── partials
-            ├── footer.html
-            ├── head.html
-            ├── navigation.html
-            └── preloader.html
+    ├── package.json
+    ├── package-lock.json
+    └── src
+        ├── index.js
+        ├── public
+        │   ├── css
+        │   │   ├── game.css
+        │   │   ├── index.css
+        │   │   └── main.css
+        │   ├── img
+        │   │   ├── 1.png
+        │   │   ├── 2.png
+        │   │   ├── 3.png
+        │   │   ├── 4.png
+        │   │   ├── 6.png
+        │   │   ├── 7.png
+        │   │   ├── 8.png
+        │   │   ├── favIcon.png
+        │   │   ├── nintendo-switch.png
+        │   │   ├── pc.png
+        │   │   ├── playstation4.png
+        │   │   └── xbox-one.png
+        │   └── js
+        │       ├── game.js
+        │       └── index.js
+        ├── routes
+        │   └── index.js
+        └── views
+            ├── game.ejs
+            ├── index.ejs
+            └── partials
+                ├── footer.html
+                ├── head.html
+                ├── navigation.html
+                └── preloader.html
 ## Before to start
 Must install Node.js in your sistem:</br>
 
