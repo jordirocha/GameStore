@@ -1,8 +1,3 @@
-<div align="center">
-    <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" width="120" />
-</div>
-
-
 # GameApp
 <div align="center">
     <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/demo.gif" width="650" />
