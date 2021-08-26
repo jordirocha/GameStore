@@ -89,7 +89,7 @@ Live demo [here](https://game-app-store.herokuapp.com/).
                 ├── head.html
                 ├── navigation.html
                 └── preloader.html
-
+<!--
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -114,7 +114,7 @@ On Linux, installing by package
     cd MyMovieList/
     npm i express ejs
     npm start
-After compiling open your web browser and paste: `http://localhost:3000`.
+After compiling open your web browser and paste: `http://localhost:3000`.-->
 
 ## Contact
 
