@@ -121,5 +121,3 @@ After compiling open your web browser and paste: `http://localhost:3000`.-->
 Jordi Rocha - [LinkedIn](https://es.linkedin.com/in/jordirocharocha) - jordirocharocha@gmail.com
 
 Project Link: [https://github.com/jordirocha/GameApp](https://github.com/jordirocha/GameApp/)
-
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
