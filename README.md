@@ -95,7 +95,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Must install <a href="https://nodejs.org/es/download/">`Node.js`/a> on your sistem.</br>
+Must install <a href="https://nodejs.org/es/download/">`Node.js`</a> on your sistem.</br>
 <!--
 ### Installation
 
