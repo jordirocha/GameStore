@@ -10,7 +10,7 @@
     Browse your favorite movies, actors and watch trailers. See what's playing in theaters right now. Discover upcoming, trending, and top-rated titles.
     <br />
     <br />
-    <a href="https://game-app-store.herokuapp.com/">View Demo</a>
+    <a href="https://game-app-store.herokuapp.com/" target="_blank">View Demo</a>
   </p>
 </p>
 
