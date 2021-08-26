@@ -1,6 +1,6 @@
 ## Table of Contents
 
-* [About the Project](#-About-GameApp)
+* [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
@@ -10,7 +10,7 @@
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
-# About GameApp
+# About The Project
 <div align="center">
     <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/demo.gif" width="650" />
 </div>
