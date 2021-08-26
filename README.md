@@ -35,7 +35,6 @@
 
 Like developer and gamer, I was thinking in develop a web application to get more information about games, so this is it.
 Applying all my knowlegde about programming this personal project has been released, With my project you'll know more about your favorite game.</br>
-Live demo [here](https://game-app-store.herokuapp.com/).
 
 ### Features
 - listing games from movie api
@@ -89,15 +88,15 @@ Live demo [here](https://game-app-store.herokuapp.com/).
                 ├── head.html
                 ├── navigation.html
                 └── preloader.html
-<!--
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Must install [Node.js](https://nodejs.org/en/) on your sistem.</br>
-
+Must install <a href="https://nodejs.org/es/download/">`Node.js`/a> on your sistem.</br>
+<!--
 ### Installation
 
 On Windows, <a href="https://nodejs.org/es/download/">here./a></br></br>
