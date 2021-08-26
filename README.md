@@ -1,4 +1,3 @@
-<!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://game-app-store.herokuapp.com/">
     <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" alt="Logo" width="140" height="140">
