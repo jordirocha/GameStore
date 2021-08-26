@@ -96,7 +96,7 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 Must install <a href="https://nodejs.org/es/download/">`Node.js`</a> on your sistem.</br>
-<!--
+
 ### Installation
 
 On Windows, <a href="https://nodejs.org/es/download/">here./a></br></br>
@@ -113,7 +113,8 @@ On Linux, installing by package
     cd MyMovieList/
     npm i express ejs
     npm start
-After compiling open your web browser and paste: `http://localhost:3000`.-->
+
+After compiling open your web browser and paste: `http://localhost:3000`.
 
 ## Contact
 
