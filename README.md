@@ -118,6 +118,6 @@ After compiling open your web browser and paste: `http://localhost:3000`.
 
 ## Contact
 
-Othneil Drew - [LinkedIn](https://es.linkedin.com/in/jordirocharocha) - jordirocharocha@gmail.com
+Jordi Rocha - [LinkedIn](https://es.linkedin.com/in/jordirocharocha) - jordirocharocha@gmail.com
 
-Project Link: [https://github.com/othneildrew/Movie-Flex](https://github.com/jordirocha/GameApp/)
+Project Link: [https://github.com/jordirocha/GameApp](https://github.com/jordirocha/GameApp/)
