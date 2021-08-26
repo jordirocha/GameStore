@@ -5,8 +5,8 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Contributing](#contributing)
-* [License](#license)
+* [Contributing](#project-directories)
+* [License](#before-to-start)
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
