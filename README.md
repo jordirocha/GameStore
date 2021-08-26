@@ -1,3 +1,19 @@
+<!-- PROJECT LOGO -->
+<p align="center">
+  <a href="https://game-app-store.herokuapp.com/">
+    <img src="./images/brand.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">GameApp</h3>
+
+  <p align="center">
+    Browse your favorite movies, actors and watch trailers. See what's playing in theaters right now. Discover upcoming, trending, and top-rated titles.
+    <br />
+    <br />
+    <a href="https://game-app-store.herokuapp.com/">View Demo</a>
+  </p>
+</p>
+
 ## Table of Contents
 
 * [About the Project](#about-the-project)
