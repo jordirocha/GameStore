@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://game-app-store.herokuapp.com/">
-    <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">GameApp</h3>
@@ -121,3 +121,5 @@ After compiling open your web browser and paste: `http://localhost:3000`.-->
 Jordi Rocha - [LinkedIn](https://es.linkedin.com/in/jordirocharocha) - jordirocharocha@gmail.com
 
 Project Link: [https://github.com/jordirocha/GameApp](https://github.com/jordirocha/GameApp/)
+
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
