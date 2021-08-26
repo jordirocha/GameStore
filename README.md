@@ -93,9 +93,11 @@ Live demo [here](https://game-app-store.herokuapp.com/).
 ## Getting Started
 
 ### Prerequisites
+
 Must install Node.js in your sistem:</br>
 
 ### Installation
+
 On Windows, <a href="https://nodejs.org/es/download/">here./a></br></br>
 On macOS, with `brew`</br>
     
