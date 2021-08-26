@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://game-app-store.herokuapp.com/">
-    <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" alt="Logo" width="100" height="100">
+    <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" alt="Logo" width="140" height="140">
   </a>
 
   <h3 align="center">GameApp</h3>
@@ -23,8 +23,6 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Contributing](#project-directories)
-* [License](#before-to-start)
 * [Contact](#contact)
 
 
