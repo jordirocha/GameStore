@@ -11,9 +11,7 @@
 * [Acknowledgements](#acknowledgements)
 
 # About The Project
-<div align="center">
-    <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/demo.gif" width="650" />
-</div>
+<img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/demo.gif" />
 
 Like developer and gamer, I was thinking in develop a web application to get more information about games, so this is it.
 Applying all my knowlegde about programming this personal project has been released, With my project you'll know more about your favorite game.</br>
