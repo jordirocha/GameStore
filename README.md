@@ -19,7 +19,7 @@
 * [About the Project](#about-the-project)
   * [Features](#features)
   * [Built With](#built-with)
-  * [Project directories](#project-directories)
+  * [Project Directories](#project-directories)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -53,7 +53,7 @@ Live demo [here](https://game-app-store.herokuapp.com/).
 * CSS
 * JavaScript
 
-### Project Directories
+### Project directories
     ├── package.json
     ├── package-lock.json
     └── src
@@ -90,7 +90,9 @@ Live demo [here](https://game-app-store.herokuapp.com/).
                 ├── navigation.html
                 └── preloader.html
 
-## Before to start
+## Getting Started
+
+## Prerequisites
 Must install Node.js in your sistem:</br>
 
 On Windows, <a href="https://nodejs.org/es/download/">here./a></br></br>
