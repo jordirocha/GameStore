@@ -27,7 +27,7 @@ Live demo [here](https://game-app-store.herokuapp.com/).
 * CSS
 * JavaScript
 
-## Features
+### Features
 - listing games from movie api
 - searching games by title
 - on searching games will be displayed
