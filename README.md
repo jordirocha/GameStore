@@ -63,7 +63,7 @@ On Linux, installing by package
     $ apt install npm
 
 ## To run app
-    git clone https://github.com/jordirocha/MyMovieList.git
+    git clone https://github.com/jordirocha/GameApp.git
     cd MyMovieList/
     npm i express ejs
     npm start
