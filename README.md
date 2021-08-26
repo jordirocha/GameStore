@@ -19,6 +19,11 @@ Like developer and gamer, I was thinking in develop a web application to get mor
 Applying all my knowlegde about programming this personal project has been released, With my project you'll know more about your favorite game.</br>
 Live demo [here](https://game-app-store.herokuapp.com/).
 
+### Built with
+* [The Movie DB (API)](https://rawg.io/apidocs)
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+
 ## Features
 - listing games from movie api
 - searching games by title
