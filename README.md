@@ -99,7 +99,7 @@ Must install <a href="https://nodejs.org/es/download/">`Node.js`</a> on your sis
 
 ### Installation
 
-On Windows, <a href="https://nodejs.org/es/download/">here./a></br></br>
+On Windows, <a href="https://nodejs.org/es/download/">here.</a></br></br>
 On macOS, with `brew`</br>
     
     brew install node
