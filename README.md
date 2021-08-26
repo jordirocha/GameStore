@@ -1,6 +1,6 @@
 ## Table of Contents
 
-* [About the Project](#about-the-project)
+* [About the Project](#-About-GameApp)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
