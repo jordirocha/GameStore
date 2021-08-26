@@ -7,7 +7,7 @@
   <h3 align="center">GameApp</h3>
 
   <p align="center">
-    Browse your favorite movies, actors and watch trailers. See what's playing in theaters right now. Discover upcoming, trending, and top-rated titles.
+    Project similar to a game store on you can search, filter by, order by. For each game it will display a new page with details about it.
     <br />
     <br />
     <a href="https://game-app-store.herokuapp.com/" target="_blank">View Demo</a>
@@ -19,6 +19,7 @@
 * [About the Project](#about-the-project)
   * [Features](#features)
   * [Built With](#built-with)
+  * [Project directories](#project-directories)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -52,7 +53,7 @@ Live demo [here](https://game-app-store.herokuapp.com/).
 * CSS
 * JavaScript
 
-## Project Directories
+### Project Directories
     ├── package.json
     ├── package-lock.json
     └── src
@@ -88,6 +89,7 @@ Live demo [here](https://game-app-store.herokuapp.com/).
                 ├── head.html
                 ├── navigation.html
                 └── preloader.html
+
 ## Before to start
 Must install Node.js in your sistem:</br>
 
