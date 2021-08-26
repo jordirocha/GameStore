@@ -1,6 +1,7 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+  * [Features](#features)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
@@ -19,14 +20,6 @@ Like developer and gamer, I was thinking in develop a web application to get mor
 Applying all my knowlegde about programming this personal project has been released, With my project you'll know more about your favorite game.</br>
 Live demo [here](https://game-app-store.herokuapp.com/).
 
-### Built with
-* [RAWG Video Games (API)](https://rawg.io/apidocs)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* HTML
-* CSS
-* JavaScript
-
 ### Features
 - listing games from movie api
 - searching games by title
@@ -34,6 +27,14 @@ Live demo [here](https://game-app-store.herokuapp.com/).
 - filters by genre and platform
 - can get more about on click game 
 - carrousel of images
+
+### Built with
+* [RAWG Video Games (API)](https://rawg.io/apidocs)
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+* HTML
+* CSS
+* JavaScript
 
 ## Project Directories
     ├── package.json
