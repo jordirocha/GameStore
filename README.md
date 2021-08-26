@@ -6,6 +6,19 @@
 Like developer and gamer, I was thinking in develop a web application to get more information about games, so this is it.
 Applying all my knowlegde about programming this personal project has been released, With my project you'll know more about your favorite game.</br>
 Live demo [here](https://game-app-store.herokuapp.com/).
+
+## Table of Contents
+
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
 ## Features
 - listing games from movie api
 - searching games by title
