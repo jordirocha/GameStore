@@ -28,7 +28,7 @@
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
-# About The Project
+## About The Project
 <div align="center">
 <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/demo.gif" />
 </div>
