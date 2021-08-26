@@ -92,9 +92,11 @@ Live demo [here](https://game-app-store.herokuapp.com/).
 
 ## Getting Started
 
+To get a local copy up and running follow these simple example steps.
+
 ### Prerequisites
 
-Must install Node.js in your sistem:</br>
+Must install [Node.js](https://nodejs.org/en/) on your sistem.</br>
 
 ### Installation
 
