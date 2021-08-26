@@ -26,11 +26,11 @@
 * [Contributing](#project-directories)
 * [License](#before-to-start)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+
 
 ## About The Project
 <div align="center">
-<img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/demo.gif" />
+  <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/demo.gif" />
 </div>
 
 Like developer and gamer, I was thinking in develop a web application to get more information about games, so this is it.
@@ -115,3 +115,9 @@ On Linux, installing by package
     npm i express ejs
     npm start
 After compiling open your web browser and paste: `http://localhost:3000`.
+
+## Contact
+
+Othneil Drew - [LinkedIn](https://es.linkedin.com/in/jordirocharocha) - jordirocharocha@gmail.com
+
+Project Link: [https://github.com/othneildrew/Movie-Flex](https://github.com/jordirocha/GameApp/)
