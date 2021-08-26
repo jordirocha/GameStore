@@ -23,9 +23,9 @@ Live demo [here](https://game-app-store.herokuapp.com/).
 * [RAWG Video Games (API)](https://rawg.io/apidocs)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
-* [HTML]
-* [CSS]
-* [JavaScript]
+* HTML
+* CSS
+* JavaScript
 
 ## Features
 - listing games from movie api
