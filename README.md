@@ -20,9 +20,12 @@ Applying all my knowlegde about programming this personal project has been relea
 Live demo [here](https://game-app-store.herokuapp.com/).
 
 ### Built with
-* [The Movie DB (API)](https://rawg.io/apidocs)
+* [RAWG Video Games (API)](https://rawg.io/apidocs)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
+* [HTML]
+* [CSS]
+* [JavaScript]
 
 ## Features
 - listing games from movie api
