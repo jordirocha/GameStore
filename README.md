@@ -22,6 +22,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
+  * [Run App](#run-app)
 * [Contact](#contact)
 
 
