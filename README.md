@@ -3,7 +3,7 @@
     <img src="https://github.com/jordirocha/GameApp/blob/main/src/public/img/favIcon.png" alt="Logo" width="140" height="140">
   </a>
 
-  <h3 align="center">GameApp</h3>
+  <h3 align="center">GameStore</h3>
 
   <p align="center">
     Project similar to a game store on you can search, filter by, order by. For each game it will display a new page with details about it.
